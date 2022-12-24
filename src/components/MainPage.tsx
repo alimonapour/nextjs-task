@@ -7,7 +7,7 @@ import ScrollButton from './UI/ScrollToTopButton'
 export const MainPage = () => {
   const { allProducts, isLoading, isError } = useFetchData()
   return (
-    <div className='w-full space-y-6 sm:w-[90%] mx-auto py-3'>
+    <div className='w-full space-y-6 sm:w-[80%] mx-auto py-3'>
       <input
         required
         placeholder='Search'
