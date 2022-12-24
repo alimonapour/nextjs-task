@@ -11,7 +11,7 @@ export const MainPage = () => {
       <input
         required
         placeholder='Search'
-        className='w-full sm:w-[90%] bg-zinc-800 py-0.5 px-2 rounded-xl box-border min-h-[38px] col-span-full xl:col-auto font-sans placeholder:text-neutral-500'
+        className='w-full bg-zinc-800 py-0.5 px-2 rounded-xl box-border min-h-[38px] col-span-full xl:col-auto font-sans placeholder:text-neutral-500'
         type='text'
       />
       {isError && (
