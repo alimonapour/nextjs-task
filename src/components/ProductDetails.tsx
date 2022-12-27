@@ -11,6 +11,7 @@ import {
   faBookmark,
 } from '@fortawesome/free-solid-svg-icons'
 
+import BgImage from '../assets/bg.jpg'
 export const ProductDetails = ({
   productId,
   closeModal,
@@ -76,10 +77,7 @@ export const ProductDetails = ({
               height='0'
               sizes='100vw'
               quality={100}
-              src={
-                product?.thumbnail ??
-                'https://i.dummyjson.com/data/products/12/thumbnail.jpg'
-              }
+              src={product?.thumbnail ?? BgImage}
               className={twMerge(
                 'w-full h-auto bg-gray-400 transition duration-1000 blur-2xl scale-120',
                 isReady &&
