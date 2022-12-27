@@ -6,7 +6,7 @@ import { ProductDetails } from './ProductDetails'
 import { motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClone } from '@fortawesome/free-solid-svg-icons'
-
+import { ChunkArray } from '../utils/ChunkArray'
 interface ProductType {
   id: number
   title: string
@@ -40,17 +40,7 @@ export default function ProductsList({ items }: Items) {
     setIsReady(true)
   }
 
-  function chunk(arr: ProductType[], size: number) {
-    let chunked = []
-    let index = 0
-    while (index < arr?.length) {
-      chunked.push(arr.slice(index, index + size))
-      index += size
-    }
-    return chunked
-  }
-
-  const chunkedArray = chunk(visibleItems, 5)
+  const chunkedArray = ChunkArray(visibleItems, 5)
 
   return (
     <div className='w-full bg-black'>
