@@ -6,6 +6,7 @@ import ScrollButton from './UI/ScrollToTopButton'
 
 export const MainPage = () => {
   const { allProducts, isLoading, isError } = useFetchData()
+  const ProductsListComponent = React.memo(ProductsList)
   return (
     <div className='w-full space-y-6 sm:w-[80%] mx-auto py-3'>
       <input
@@ -28,7 +29,7 @@ export const MainPage = () => {
         </div>
       )}
 
-      <ProductsList items={allProducts} />
+      <ProductsListComponent items={allProducts} />
       <ScrollButton />
     </div>
   )
