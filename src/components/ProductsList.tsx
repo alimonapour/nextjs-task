@@ -65,7 +65,7 @@ export default function ProductsList({ items }: Items) {
           }}
           dragMomentum={false}
           onDragEnd={(event, info) =>
-            info.point.x > 300 ? setShowModal(false) : ''
+            info.point.x > 500 ? setShowModal(false) : ''
           }
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
